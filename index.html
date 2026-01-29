@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redflix - Filmes e Séries</title>
+  <link rel="stylesheet" href="https://vjs.zencdn.net/8.10.0/video-js.css" /> <!-- Video.js CDN -->
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Redflix" class="logo"/>
+      <ul>
+        <li>Início</li>
+        <li>Séries</li>
+        <li>Filmes</li>
+        <li>Bombando</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Banner -->
+    <section id="hero" class="hero"></section>
+
+    <!-- Rows de filmes -->
+    <section class="row">
+      <h2>Em Alta Hoje</h2>
+      <div class="movies" id="trending"></div>
+    </section>
+
+    <section class="row">
+      <h2>Populares</h2>
+      <div class="movies" id="popular"></div>
+    </section>
+
+    <section class="row">
+      <h2>Mais Bem Avaliados</h2>
+      <div class="movies" id="top-rated"></div>
+    </section>
+
+    <!-- Player Modal -->
+    <div id="playerModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <video id="videoPlayer" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" height="auto"></video>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
