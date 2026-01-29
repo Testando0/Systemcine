@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Redflix - Filmes e Séries</title>
-  <link rel="stylesheet" href="https://vjs.zencdn.net/8.10.0/video-js.css" /> <!-- Video.js CDN -->
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
     <div class="nav">
       <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Redflix" class="logo"/>
-      <ul>
+      <ul class="nav-links">
         <li>Início</li>
         <li>Séries</li>
         <li>Filmes</li>
@@ -22,12 +21,13 @@
   </header>
 
   <main>
-    <!-- Hero Banner -->
-    <section id="hero" class="hero"></section>
+    <section id="hero" class="hero">
+        <div class="hero-content" id="hero-content">
+            </div>
+    </section>
 
-    <!-- Rows de filmes -->
     <section class="row">
-      <h2>Em Alta Hoje</h2>
+      <h2>Em Alta (Semana)</h2>
       <div class="movies" id="trending"></div>
     </section>
 
@@ -41,16 +41,16 @@
       <div class="movies" id="top-rated"></div>
     </section>
 
-    <!-- Player Modal -->
     <div id="playerModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <video id="videoPlayer" class="video-js vjs-big-play-centered" controls preload="auto" width="100%" height="auto"></video>
+        <div class="iframe-container">
+            <iframe id="videoFrame" src="" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+        </div>
       </div>
     </div>
   </main>
 
-  <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
